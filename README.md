@@ -1,5 +1,7 @@
 # parens
 
+[![Travis](https://img.shields.io/travis/hughrawlinson/parens.svg)]()
+
 A Clojure library designed to validate parenthesis nesting in strings.
 
 
