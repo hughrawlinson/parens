@@ -10,15 +10,21 @@
   [string]
   (filterChars string "()"))
 
-(defn calcParenState [word] (reduce (fn [ac el]
-                                      (case el
-                                        \( (cons (+ (first ac) 1) ac)
-                                        \) (cons (- (first ac) 1) ac)
-                                        )) [0] (filterParens word)))
+(defn calcParenState
+  [word]
+  (reduce (fn [ac el]
+            (case el
+              \( (cons (+ (first ac) 1) ac)
+              \) (cons (- (first ac) 1) ac)
+              )) [0] (filterParens word)))
 
 (defn validateParentheses
   "Validate that parentheses characters are properly nested in a string"
   [word]
   (let [parenVals (calcParenState word)]
-    (and (every? #(>= % 0) parenVals)
-         (= 0 (first parenVals)))))
+    (and (every?
+          #(>= % 0)
+          parenVals)
+         (=
+          0
+          (first parenVals)))))
