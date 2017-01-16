@@ -1,6 +1,6 @@
 # parens
 
-[![Travis](https://img.shields.io/travis/hughrawlinson/parens.svg)]()
+[![Travis](https://img.shields.io/travis/hughrawlinson/parens.svg)](https://travis-ci.org/hughrawlinson/parens)
 
 A Clojure library designed to validate parenthesis nesting in strings.
 
